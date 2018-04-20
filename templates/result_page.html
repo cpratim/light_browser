@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <link rel=stylesheet type='text/css' href='{{ url_for('static', filename='result_page_style.css') }}'>
+    <title>Results</title>
+  </head>
+  <body>
+      <div class='header'>
+        <h1><strong>Results</strong></h1>
+      </div>
+    <br><br><br><br>
+    <br><br><br><br>
+    <div class='container'>
+      <h1>Images</h1>
+      {%for image in images%}
+        <img src={{image}}>
+      {%endfor%}
+    </div>
+    <br> <br> <br>
+    <div class='linkContainer'>
+      <div class='title'>
+        <h1>Links</h1>
+      </div>
+      {%for link in links%}
+      <div class='link'>
+        <a href={{link}}> {{link}} </a>
+        <br><br><br>
+      </div>
+      {%endfor%}
+    </div>
+    </body>
+</html>
